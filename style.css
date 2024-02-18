@@ -1,0 +1,296 @@
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(fonts/CascadiaCode.ttf);
+}
+
+.background {
+  background-color: #00051e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.content-container {
+  background-color: #0c1127;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  height: 100px;
+  padding-bottom: 10px;
+}
+/* .image {
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  z-index: 0;
+  margin-right: -80px;
+  width: 100%;
+  margin-top: 20px;
+  min-height: 255px;
+  min-width: 320px;
+  overflow: hidden;
+  max-width: 1440px;
+} */
+.gradients {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.gradient-bar {
+  background: linear-gradient(90deg, #fffbf1 0%, #9edcff 109.52%);
+  height: 10px;
+  margin-top: 10px;
+  width: 673px;
+}
+
+.gradient-bar-secondary {
+  background: linear-gradient(90deg, #fffbf1 0%, #ff594f 109.52%);
+  height: 10px;
+  margin-top: 10px;
+  width: 197px;
+}
+.gradient-bar-thirdly {
+  background: linear-gradient(90deg, #ff99af 0%, #2f3863 109.52%);
+  height: 10px;
+  margin-top: 10px;
+  width: 590px;
+  align-self: first baseline;
+}
+
+.auth-logo {
+  padding-top: 100px;
+  .image {
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    /* z-index: 0; */
+    margin-right: -85px;
+    /* width: 100%; */
+    /* margin-top: 20px; */
+    height: 280px;
+    width: auto;
+    overflow: hidden;
+  }
+  display: inline-flex;
+  align-items: baseline;
+}
+.title1 {
+  position: relative;
+  /* z-index: 1; */
+  color: #fff;
+  text-align: center;
+  /* margin-top: 10px; */
+  font-family: "Cascadia Code";
+  font: 300 128px Cascadia Code;
+}
+.title2 {
+  position: relative;
+  /* z-index: 1; */
+  color: #fff;
+  text-align: center;
+  margin-left: 50px;
+  /* margin-top: 10px; */
+  font-family: "Cascadia Code";
+  font: 300 128px Cascadia Code;
+}
+
+.sub-title {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Cascadia Code";
+  font: 300 24px Cascadia Code, sans-serif;
+}
+
+.button {
+  background: radial-gradient(
+    114.52% 114.49% at 50% 50%,
+    #bad5e4 54%,
+    #fffbf1 100%
+  );
+  color: #0c1127;
+  text-align: center;
+  margin: 51px 0 45px;
+  padding: 17px 59px;
+  font-family: "Cascadia Code";
+  font: 600 40px Cascadia Code, sans-serif;
+  text-decoration: none;
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+    color: #0c1127;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #5d668c;
+  }
+  a:active {
+    text-decoration: none;
+    color: #5d668c;
+  }
+}
+.forgot-password {
+  a:link {
+    color: #fff;
+  }
+  a:visited {
+    color: #fff;
+  }
+  a:hover {
+    color: #5d668c;
+  }
+  a:active {
+    color: #5d668c;
+  }
+}
+@media (max-width: 991px) {
+  .content-container,
+  .gradient-bar,
+  .title,
+  .sub-title,
+  .button {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: "Cascadia Code";
+    font: 40px Cascadia Code PL, sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+  }
+}
+/* .div {
+  background-color: #00051e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.div-2 {
+  background-color: #0c1127;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .div-2 {
+    max-width: 100%;
+  }
+}
+.div-3 {
+  align-self: stretch;
+  display: flex;
+  margin-top: 68px;
+  width: 100%;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .div-3 {
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+}
+.div-4 {
+  background: linear-gradient(90deg, #fffbf1 0%, #9edcff 109.52%);
+  width: 649px;
+  max-width: 100%;
+  height: 10px;
+}
+.div-5 {
+  background: linear-gradient(90deg, #fffbf1 0%, #ff594f 109.52%);
+  margin-top: 5px;
+  width: 197px;
+  height: 12px;
+}
+.div-6 {
+  align-self: start;
+  width: 569px;
+  max-width: 100%;
+  height: 10px;
+}
+.div-7 {
+  color: #fff;
+  text-align: center;
+  margin-top: 293px;
+  font: 300 128px Cascadia Code, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-7 {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+}
+.div-8 {
+  color: #fff;
+  text-align: center;
+  margin-top: 41px;
+  font: 300 128px Cascadia Code, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-8 {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+}
+.div-9 {
+  background: linear-gradient(
+    91deg,
+    #c4dffe 0.25%,
+    #fff2d1 32.01%,
+    #ff99af 64.78%,
+    #ff9b95 97.51%
+  );
+  margin-top: 58px;
+  width: 738px;
+  max-width: 100%;
+  height: 13px;
+}
+@media (max-width: 991px) {
+  .div-9 {
+    margin-top: 40px;
+  }
+}
+.div-10 {
+  color: #fff;
+  text-align: center;
+  margin-top: 33px;
+  font: 300 24px Cascadia Code, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-10 {
+    max-width: 100%;
+  }
+}
+.div-11 {
+  background: radial-gradient(
+    114.52% 114.49% at 50% 50%,
+    #bad5e4 54%,
+    #fffbf1 100%
+  );
+  justify-content: center;
+  color: #0c1127;
+  white-space: nowrap;
+  text-align: center;
+  margin: 51px 0 45px;
+  padding: 17px 59px;
+  font: 600 40px Cascadia Code PL, -apple-system, Roboto, Helvetica, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-11 {
+    white-space: initial;
+    margin: 40px 0;
+    padding: 0 20px;
+  }
+} */
