@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="background">
+    <div>
+      <div class="content-container" style="position: fixed; z-index: 1">
+        <div class="header">
+          <div
+            style="
+              width: 328.01px;
+              height: 64.01px;
+              left: 1200px;
+              top: 23px;
+              position: absolute;
+            "
+          >
+            <div
+              style="
+                left: 0px;
+                top: 5px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 36px;
+                font-family: Cascadia Code;
+                font-weight: 500;
+                word-wrap: break-word;
+              "
+            >
+              Выйти
+            </div>
+          </div>
+          <div
+            style="
+              left: 107px;
+              top: 30px;
+              position: absolute;
+              text-align: center;
+              color: white;
+              font-size: 36px;
+              font-family: Cascadia Code;
+              font-weight: 700;
+              word-wrap: break-word;
+            "
+          >
+            МОЙ ПРОФИЛЬ
+          </div>
+          <img
+            src="img/header2.png"
+            alt="Decorative"
+            class="image"
+            width="100%"
+            height="100px"
+          />
+        </div>
+      </div>
+      <div style="z-index: 0">
+        <style>
+          .profile-container {
+            background-color: #00051e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .header-container {
+            background-color: #0c1127;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            padding: 43px 38px;
+          }
+          @media (max-width: 991px) {
+            .header-container {
+              max-width: 100%;
+              padding: 0 20px;
+            }
+          }
+          .main-header {
+            align-self: center;
+            display: flex;
+            width: 100%;
+            max-width: 1247px;
+            justify-content: space-between;
+            gap: 20px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+          }
+          @media (max-width: 991px) {
+            .main-header {
+              max-width: 100%;
+              flex-wrap: wrap;
+            }
+          }
+          .profile-title,
+          .logout {
+            font: 36px Cascadia Code, sans-serif;
+          }
+          .profile-info-container {
+            display: flex;
+            margin-top: 79px;
+            width: 100%;
+            padding-right: 29px;
+            justify-content: space-between;
+            gap: 20px;
+          }
+          @media (max-width: 991px) {
+            .profile-info-container {
+              max-width: 100%;
+              flex-wrap: wrap;
+              padding-right: 20px;
+              margin-top: 40px;
+            }
+          }
+          .profile-image-column,
+          .first-name-column,
+          .last-name-column,
+          .updates-column,
+          .document-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            margin-left: 0px;
+          }
+          @media (max-width: 991px) {
+            .profile-image-column,
+            .first-name-column,
+            .last-name-column,
+            .updates-column,
+            .document-column {
+              width: 100%;
+            }
+          }
+          .profile-image {
+            aspect-ratio: 1;
+            object-fit: auto;
+            object-position: center;
+            width: 144px;
+            max-width: 100%;
+          }
+          @media (max-width: 991px) {
+            .profile-image {
+              margin-top: 40px;
+            }
+          }
+          .name-text,
+          .update-text {
+            color: #fff;
+            text-align: center;
+            align-self: stretch;
+            margin: auto 0;
+            font: 300 36px Cascadia Code, sans-serif;
+          }
+          @media (max-width: 991px) {
+            .name-text,
+            .update-text {
+              margin-top: 40px;
+            }
+          }
+          .update-date,
+          .document-date {
+            font-family: Cascadia Code, sans-serif;
+            font-weight: 700;
+            align-self: end;
+            margin-top: 24px;
+          }
+          .content-column,
+          .additional-content-column {
+            gap: 20px;
+            display: flex;
+          }
+          @media (max-width: 991px) {
+            .content-column,
+            .additional-content-column {
+              flex-direction: column;
+              align-items: stretch;
+              gap: 0px;
+            }
+          }
+          .content-detail,
+          .additional-content-detail {
+            text-align: justify;
+            align-self: end;
+            font: 300 22px Cascadia Code, sans-serif;
+          }
+          @media (max-width: 991px) {
+            .content-detail,
+            .additional-content-detail {
+              max-width: 100%;
+            }
+          }
+          .content-names,
+          .document-names {
+            display: flex;
+            margin-top: 48px;
+            justify-content: space-between;
+            gap: 17px;
+            font-weight: 400;
+          }
+          @media (max-width: 991px) {
+            .content-names,
+            .document-names {
+              margin-top: 40px;
+            }
+          }
+          .document-item {
+            font-family: Aksara Bali Galang, -apple-system, Roboto, Helvetica,
+              sans-serif;
+            border-radius: 3px;
+            background-color: #fcd;
+            flex-grow: 1;
+            justify-content: center;
+            padding: 50px 15px;
+          }
+          @media (max-width: 991px) {
+            .document-item {
+              white-space: initial;
+            }
+          }
+        </style>
+
+
+          <div
+            style="
+              width: 437px;
+              height: 144px;
+              left: 52px;
+              top: 148px;
+              position: absolute;
+            "
+          >
+            <div
+              style="
+                width: 144px;
+                height: 144px;
+                left: 0px;
+                top: 0px;
+                position: absolute;
+              "
+            >
+              <div
+                style="
+                  width: 144px;
+                  height: 144px;
+                  left: 0px;
+                  top: 0px;
+                  position: absolute;
+                  background: white;
+                  border-radius: 9999px;
+                "
+              ></div>
+              <img
+                style="
+                  width: 108.37px;
+                  height: 86.55px;
+                  left: 17.76px;
+                  top: 31.79px;
+                  position: absolute;
+                "
+                src="img/user-pic.png"
+              />
+            </div>
+            <div
+              style="
+                left: 190px;
+                top: 34px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 36px;
+                font-family: Cascadia Code;
+                font-weight: 300;
+                word-wrap: break-word;
+              "
+            >
+              Имя
+            </div>
+            <div
+              style="
+                left: 289px;
+                top: 34px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 36px;
+                font-family: Cascadia Code;
+                font-weight: 300;
+                word-wrap: break-word;
+              "
+            >
+              Фамилия
+            </div>
+          </div>
+          <div
+            style="
+              left: 700px;
+              top: 190px;
+              position: absolute;
+              text-align: center;
+              color: white;
+              font-size: 28px;
+              font-family: Cascadia Code;
+              font-weight: 300;
+              word-wrap: break-word;
+            "
+          >
+            Обо мне:
+          </div>
+          
+          <div
+            style="
+              width: 1359px;
+              height: 571px;
+              left: 38px;
+              top: 336px;
+              position: absolute;
+            "
+          >
+          
+            <div
+              style="
+                width: 1359px;
+                height: 278px;
+                left: 0px;
+                top: 293px;
+                position: absolute;
+                background: #1a2140;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
+              "
+            ></div>
+            <div
+              style="
+                left: 106px;
+                top: 346px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 28px;
+                font-family: Cascadia Code;
+                font-weight: 700;
+                word-wrap: break-word;
+              "
+            >
+              Имя Фамилия 
+            </div>
+            <div
+              style="
+                width: 1359px;
+                height: 278px;
+                left: 0px;
+                top: 0px;
+                position: absolute;
+                background: #1a2140;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
+              "
+            ></div>
+            <div
+              style="
+                left: 106px;
+                top: 53px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 28px;
+                font-family: Cascadia Code;
+                font-weight: 700;
+                word-wrap: break-word;
+              "
+            >
+              Имя Фамилия
+            </div>
+            <div
+              style="
+                left: 1214px;
+                top: 331px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 18px;
+                font-family: Cascadia Code;
+                font-weight: 700;
+                word-wrap: break-word;
+              "
+            >
+              01.01.2024
+            </div>
+            <div
+              style="
+                width: 880px;
+                left: 100px;
+                top: 391px;
+                position: absolute;
+                text-align: justify;
+                color: white;
+                font-size: 22px;
+                font-family: Cascadia Code;
+                font-weight: 300;
+                word-wrap: break-word;
+              "
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </div>
+            <div
+              style="
+                width: 295px;
+                height: 117px;
+                left: 1036px;
+                top: 396px;
+                position: absolute;
+              "
+            >
+              <div
+                style="
+                  width: 134.37px;
+                  height: 117px;
+                  left: 0px;
+                  top: 0px;
+                  position: absolute;
+                  background: #ffcedf;
+                  border-radius: 3px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 98.85px;
+                  height: 57px;
+                  left: 18.53px;
+                  top: 33px;
+                  position: absolute;
+                  text-align: center;
+                  color: white;
+                  font-size: 18px;
+                  font-family: Aksara Bali Galang;
+                  font-weight: 400;
+                  word-wrap: break-word;
+                "
+              >
+                файл 1
+              </div>
+              <div
+                style="
+                  width: 134.37px;
+                  height: 117px;
+                  left: 160.63px;
+                  top: -0px;
+                  position: absolute;
+                  background: #ffcedf;
+                  border-radius: 3px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 98.85px;
+                  height: 57px;
+                  left: 179.16px;
+                  top: 32px;
+                  position: absolute;
+                  text-align: center;
+                  color: white;
+                  font-size: 18px;
+                  font-family: Aksara Bali Galang;
+                  font-weight: 400;
+                  word-wrap: break-word;
+                "
+              >
+                файл 2
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              width: 1313px;
+              height: 358.01px;
+              left: 56px;
+              top: 374px;
+              position: absolute;
+            "
+          >
+            <div
+              style="
+                width: 64.01px;
+                height: 64.01px;
+                left: 0px;
+                top: 294px;
+                position: absolute;
+              "
+            >
+              <div
+                style="
+                  width: 64.01px;
+                  height: 64.01px;
+                  left: 0px;
+                  top: 0px;
+                  position: absolute;
+                  background: white;
+                  border-radius: 9999px;
+                "
+              ></div>
+              <img
+                style="
+                  width: 48.17px;
+                  height: 38.47px;
+                  left: 7.9px;
+                  top: 14.13px;
+                  position: absolute;
+                "
+                src="img/user-pic.png"
+              />
+            </div>
+            <div
+              style="
+                width: 64.01px;
+                height: 64.01px;
+                left: 2px;
+                top: 1px;
+                position: absolute;
+              "
+            >
+              <div
+                style="
+                  width: 64.01px;
+                  height: 64.01px;
+                  left: 0px;
+                  top: 0px;
+                  position: absolute;
+                  background: white;
+                  border-radius: 9999px;
+                "
+              ></div>
+              <img
+                style="
+                  width: 48.17px;
+                  height: 38.47px;
+                  left: 7.9px;
+                  top: 14.13px;
+                  position: absolute;
+                "
+                src="img/user-pic.png"
+              />
+            </div>
+            <div
+              style="
+                left: 1196px;
+                top: 0px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 18px;
+                font-family: Cascadia Code;
+                font-weight: 700;
+                word-wrap: break-word;
+              "
+            >
+              01.01.2024
+            </div>
+            <div
+              style="
+                width: 880px;
+                left: 82px;
+                top: 60px;
+                position: absolute;
+                text-align: justify;
+                color: white;
+                font-size: 22px;
+                font-family: Cascadia Code;
+                font-weight: 300;
+                word-wrap: break-word;
+              "
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </div>
+            <div
+              style="
+                width: 295px;
+                height: 117px;
+                left: 1018px;
+                top: 65px;
+                position: absolute;
+              "
+            >
+              <div
+                style="
+                  width: 87px;
+                  height: 117px;
+                  left: 0px;
+                  top: 0px;
+                  position: absolute;
+                  background: #ffccdd;
+                  border-radius: 3px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 64px;
+                  height: 57px;
+                  left: 12px;
+                  top: 33px;
+                  position: absolute;
+                  text-align: center;
+                  color: white;
+                  font-size: 18px;
+                  font-family: Aksara Bali Galang;
+                  font-weight: 400;
+                  word-wrap: break-word;
+                "
+              >
+                файл 1
+              </div>
+              <div
+                style="
+                  width: 87px;
+                  height: 117px;
+                  left: 104px;
+                  top: 0px;
+                  position: absolute;
+                  background: #ffccdd;
+                  border-radius: 3px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 64px;
+                  height: 57px;
+                  left: 116px;
+                  top: 32px;
+                  position: absolute;
+                  text-align: center;
+                  color: white;
+                  font-size: 18px;
+                  font-family: Aksara Bali Galang;
+                  font-weight: 400;
+                  word-wrap: break-word;
+                "
+              >
+                файл 2
+              </div>
+              <div
+                style="
+                  width: 87px;
+                  height: 117px;
+                  left: 208px;
+                  top: 0px;
+                  position: absolute;
+                  background: #ffccdd;
+                  border-radius: 3px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 64px;
+                  height: 57px;
+                  left: 220px;
+                  top: 32px;
+                  position: absolute;
+                  text-align: center;
+                  color: white;
+                  font-size: 18px;
+                  font-family: Aksara Bali Galang;
+                  font-weight: 400;
+                  word-wrap: break-word;
+                "
+              >
+                файл 3
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              left: 700px;
+              top: 240px;
+              right: 50px;
+              position: absolute;
+              text-align:justify;
+              color: white;
+              font-size: 22px;
+              font-family: Cascadia Code;
+              font-weight: 300;
+              word-wrap: break-word;
+            "
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+         
+          </div>
+          <div
+              style="
+                width: 1359px;
+                height: 80px;
+                left: 38px;
+                top: 930px;
+                position: absolute;
+                background: #ffccdd;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
+              "
+            ><p style="font-size: 26px; color: #000; text-align: center; font-weight: 600; padding-bottom: 100px;">+</p></div>
+           
+        </div>
+        
+      </div>
+      
+    </div>
+  </body>
+</html>
